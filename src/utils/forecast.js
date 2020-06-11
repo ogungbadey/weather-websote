@@ -8,9 +8,11 @@ const forecast = (lat, lon, callback) => {
     } else if (body.message) {
       callback(`Unable to find location.`, undefined);
     } else {
-      callback(undefined, `It's currently ${body.main.temp} degrees out. Wind speed is ${body.wind.speed}`);
+      console.log(body);
+      
+      callback(undefined, `It's currently ${body.main.temp} degrees out. Wind speed is ${body.wind.speed}. The humidity is at ${body.main.humidity}%. 
+      Temperature is maxed at ${body.main.temp_max} degrees, minimum at ${body.main.temp_min} degrees`);
     }
   });
 };
-
 module.exports = forecast;
