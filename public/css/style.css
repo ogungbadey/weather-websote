@@ -46,3 +46,11 @@ button {
 button:hover {
   background-color: #888;
 }
+
+.about a{
+  text-decoration: none;
+}
+
+.about a:hover, .about a:visited {
+  color: black;
+}
