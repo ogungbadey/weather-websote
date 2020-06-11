@@ -1,5 +1,3 @@
-
-
 const form = document.querySelector("form");
 const input = document.querySelector("input");
 const msg1 = document.querySelector(".msg1");
@@ -8,7 +6,7 @@ const msg2 = document.querySelector(".msg2");
 form.addEventListener("submit", e => {
   e.preventDefault();
   const location = input.value;
-  fetch(`http://localhost:3000/weather?address=${location}`)
+  fetch(`/weather?address=${location}`)
     .then(res => res.json())
     .then(data => {
       if (data.error) {
